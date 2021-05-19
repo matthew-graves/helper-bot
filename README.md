@@ -5,8 +5,8 @@ Use Discord Slash Commands to offer people helpful advice
 To add your bot to your discord server with the appropriate permissions, ensure that the permission for applications.commands exists in addition to the bot OAUTH scope. Without this you will receive a "403 Forbidden (error code: 50001): Missing Access" error
 
 Dependencies: 
-pip install discord.py
-pip install git+https://github.com/eunwoo1104/discord-py-slash-command.git 
+    pip install discord.py
+    pip install git+https://github.com/eunwoo1104/discord-py-slash-command.git 
 
 *discord-py-slash-command requires the latest release from git as the bot uses features that aren't available on the Python Package Index release*
 
