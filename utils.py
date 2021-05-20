@@ -13,11 +13,12 @@ def get_env_vars() -> (list, int, str):
     elif os.environ.get("BOT_TOKEN") is None:
         print("Missing BOT_TOKEN environment variable")
         exit(1)
-
+        
     try:
         server_id = json.loads(os.environ.get("SERVER_ID"))
         if isinstance(server_id, int):
             server_id = [server_id]
+
     except Exception as e:
         print("There was an error parsing the SERVER_ID variable, please validate that is set to either an int or an array of ints formatted as \"[1234,1235]\"")
         exit(1)
