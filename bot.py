@@ -20,17 +20,9 @@ for server in server_ids:
         create_permission(server, SlashCommandPermissionType.ROLE, False),  # Everyone | everyone role ID = Server ID 
     ]
 
-print(quest_roles)
-
 @client.event
 async def on_ready():
     print("Ready!")
-
-@slash.slash(name="ping", guild_ids=server_ids)
-@slash.permission(guild_id=server_ids[0],permissions=quest_roles) # This will use the first server in your list to define which server gets your permissions for this command
-async def _ping(ctx): # Defines a new "context" (ctx) command called "ping."
-    await ctx.send(f"Pong! ({client.latency*1000}ms)")
-
 
 for command in commands:
     function_name = f"_{command}"
