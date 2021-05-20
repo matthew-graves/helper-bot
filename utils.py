@@ -29,6 +29,7 @@ def get_env_vars() -> (list, int, str):
         return server_id, role_id, bot_token
     except ValueError as e:
         print("Please validate that LUMENAUT_ROLE_ID is currently set to an integer")
+        exit(1)
 
     except Exception as e:
         print("An unexpected error occured, Exception Details: " + str(e))
