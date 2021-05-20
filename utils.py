@@ -7,10 +7,10 @@ def get_env_vars() -> (list, int, str):
     if os.environ.get("SERVER_ID") is None:
         print("Missing SERVER_ID environment variable, this can be obtained by Server Settings -> Widget -> Server ID")
         exit(1)
-    elif os.environ.get("LUMENAUT_ROLE_ID") is None:
+    if os.environ.get("LUMENAUT_ROLE_ID") is None:
         print("Missing LUMENAUT_ROLE_ID environment variable, this can be obtained by Server Settings -> Roles -> Right Click Desired Role -> Copy ID")
         exit(1)
-    elif os.environ.get("BOT_TOKEN") is None:
+    if os.environ.get("BOT_TOKEN") is None:
         print("Missing BOT_TOKEN environment variable")
         exit(1)
         
